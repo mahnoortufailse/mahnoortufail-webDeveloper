@@ -5,6 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { LoadingSkeleton } from "@/components/loading-spinner"
+import "./globals.css"
 
 const AboutSection = lazy(() =>
   import("@/components/about-section").then((module) => ({ default: module.AboutSection })),
@@ -41,7 +42,6 @@ function SectionLoader() {
     </div>
   )
 }
-
 export default function Portfolio() {
   const handleDownloadResume = () => {
     const link = document.createElement("a")
