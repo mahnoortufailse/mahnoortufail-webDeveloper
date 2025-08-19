@@ -1,21 +1,7 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
-@tailwind utilities;
-
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
-
-/* Added responsive breakpoint for extra small screens */
-@theme inline {
-  --breakpoint-xs: 475px;
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-}
 
 :root {
   --background: oklch(1 0 0);
@@ -133,74 +119,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-
-  /* Added responsive utilities for better mobile experience */
-  .container-responsive {
-    @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .text-responsive-xs {
-    @apply text-xs sm:text-sm;
-  }
-
-  .text-responsive-sm {
-    @apply text-sm sm:text-base;
-  }
-
-  .text-responsive-base {
-    @apply text-base sm:text-lg;
-  }
-
-  .text-responsive-lg {
-    @apply text-lg sm:text-xl;
-  }
-
-  .text-responsive-xl {
-    @apply text-xl sm:text-2xl;
-  }
-
-  .text-responsive-2xl {
-    @apply text-2xl sm:text-3xl;
-  }
-
-  .text-responsive-3xl {
-    @apply text-3xl sm:text-4xl md:text-5xl;
-  }
-
-  .spacing-responsive-sm {
-    @apply space-y-4 sm:space-y-6;
-  }
-
-  .spacing-responsive-md {
-    @apply space-y-6 sm:space-y-8;
-  }
-
-  .spacing-responsive-lg {
-    @apply space-y-8 sm:space-y-12;
-  }
-
-  .padding-responsive-sm {
-    @apply p-3 sm:p-4;
-  }
-
-  .padding-responsive-md {
-    @apply p-4 sm:p-6;
-  }
-
-  .padding-responsive-lg {
-    @apply p-6 sm:p-8;
-  }
-
-  .gap-responsive-sm {
-    @apply gap-3 sm:gap-4;
-  }
-
-  .gap-responsive-md {
-    @apply gap-4 sm:gap-6;
-  }
-
-  .gap-responsive-lg {
-    @apply gap-6 sm:gap-8;
   }
 }
