@@ -117,15 +117,6 @@ export const HeroSection = memo(function HeroSection({ onDownloadResume }: HeroS
                 <Mail className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm sm:text-base truncate">mahnoortufailse@gmail.com</span>
               </motion.a>
-              <motion.a
-                href="tel:+923301546778"
-                className="flex items-center gap-2 hover:text-accent transition-colors duration-300"
-                variants={staggerItem}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Phone className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm sm:text-base">+92 330 1546778</span>
-              </motion.a>
               <MotionDiv className="flex items-center gap-2" variants={staggerItem}>
                 <MapPin className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm sm:text-base">Abbottabad, Pakistan</span>

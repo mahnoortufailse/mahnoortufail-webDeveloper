@@ -188,7 +188,7 @@ export function EnhancedContactSection({ onDownloadResume }: { onDownloadResume:
                         value: "mahnoortufailse@gmail.com",
                         href: "mailto:mahnoortufailse@gmail.com",
                       },
-                      { icon: Phone, label: "Phone", value: "+92 330 1546778", href: "tel:+923301546778" },
+                     
                       { icon: MapPin, label: "Location", value: "Abbottabad, Pakistan" },
                       { icon: Clock, label: "Response Time", value: "Usually within 24 hours" },
                     ].map((item, index) => (
