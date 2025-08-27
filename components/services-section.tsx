@@ -968,7 +968,7 @@ export function ServicesSection() {
                         <Badge className="bg-accent text-accent-foreground w-fit">Current</Badge>
                       </div>
                       <p className="text-muted-foreground font-medium text-sm sm:text-base">Cybitronix Technology</p>
-                      <p className="text-xs sm:text-sm text-muted-foreground mb-3">July 2025 - Present</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-3">Augest 2024 - Present</p>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Currently working as a Full Stack Developer, contributing to innovative projects like Foreigner
                         Cafe and developing cutting-edge solutions using modern web technologies and best practices.

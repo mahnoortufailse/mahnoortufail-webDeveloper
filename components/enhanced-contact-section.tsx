@@ -543,7 +543,7 @@ export function EnhancedContactSection({ onDownloadResume }: { onDownloadResume:
                           ) : (
                             <motion.div
                               key="send"
-                              className="flex items-center"
+                              className="flex items-center cursor-pointer"
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               exit={{ opacity: 0 }}
