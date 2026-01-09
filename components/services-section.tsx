@@ -1,10 +1,10 @@
 //@ts-nocheck
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Layers,
   Palette,
@@ -28,15 +28,22 @@ import {
   BookOpen,
   Linkedin,
   Leaf,
-} from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import { fadeInUp, staggerItem, cardHover, hoverScale } from "@/lib/animations"
-import { MotionDiv, StaggerWrapper, SectionWrapper } from "@/components/motion-wrapper"
-import Image from "next/image"
+  Cpu,
+  Shield,
+  Tent,
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { fadeInUp, staggerItem, cardHover, hoverScale } from "@/lib/animations";
+import {
+  MotionDiv,
+  StaggerWrapper,
+  SectionWrapper,
+} from "@/components/motion-wrapper";
+import Image from "next/image";
 
 export function ServicesSection() {
-  const [activeTab, setActiveTab] = useState("all")
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null)
+  const [activeTab, setActiveTab] = useState("all");
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   const projects = {
     featured: [
@@ -60,7 +67,11 @@ export function ServicesSection() {
 
         liveUrl: "https://dashboard.signaform.pro/",
         teamMembers: [
-          { name: "Mahnoor Tufail", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/mahnoortufail/" },
+          {
+            name: "Mahnoor Tufail",
+            role: "Software Engineer",
+            linkedin: "https://www.linkedin.com/in/mahnoortufail/",
+          },
           {
             name: "Umar Ahmed",
             role: "Associate Software Engineer",
@@ -71,7 +82,11 @@ export function ServicesSection() {
             role: "Frontend Developer",
             linkedin: "https://www.linkedin.com/in/maryamsarfraz/",
           },
-          { name: "Iqra Ali", role: "UI/UX Designer", linkedin: "https://www.linkedin.com/in/iqra-ali-a48589255/" },
+          {
+            name: "Iqra Ali",
+            role: "UI/UX Designer",
+            linkedin: "https://www.linkedin.com/in/iqra-ali-a48589255/",
+          },
         ],
       },
       {
@@ -81,7 +96,13 @@ export function ServicesSection() {
         description:
           "Complete restaurant management system with online ordering, table reservations, and customer analytics. Built with modern web technologies and responsive design.",
         category: "teamwork",
-        technologies: ["React", "Node.js", "MongoDB", "Express", "Payment Gateway"],
+        technologies: [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Express",
+          "Payment Gateway",
+        ],
         stats: { orders: "2k+", uptime: "99.8%", customers: "500+" },
         icon: Coffee,
         color: "chart-1",
@@ -98,13 +119,126 @@ export function ServicesSection() {
             role: "Full Stack Developer",
             linkedin: "https://www.linkedin.com/in/mahnoortufail/",
           },
-          { name: "Umar Ahmed", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/umarahmedse/" },
+          {
+            name: "Umar Ahmed",
+            role: "Software Engineer",
+            linkedin: "https://www.linkedin.com/in/umarahmedse/",
+          },
           {
             name: "Maryam Sarfraz",
             role: "Frontend Developer",
             linkedin: "https://www.linkedin.com/in/maryamsarfraz/",
           },
-          { name: "Irsa Sarfraz", role: "UI/UX Designer", linkedin: "https://www.linkedin.com/in/irsa-sarfaraz/" },
+          {
+            name: "Irsa Sarfraz",
+            role: "UI/UX Designer",
+            linkedin: "https://www.linkedin.com/in/irsa-sarfaraz/",
+          },
+        ],
+      },
+      {
+        id: "Nomadic Booking",
+        title: "Nomadic Booking System",
+        subtitle: "Desert Camping Booking Platform",
+        description:
+           "A specialized online booking platform for luxury desert camping experiences in the UAE. Enables customers to browse, book, and manage desert adventures, accommodations, and activities with seamless payment integration. Includes a comprehensive admin dashboard for managing bookings, inventory, customer data, and system operations.",
+        category: "teamwork",
+        technologies: ["Next.js", "React", "Payment Gateway", "Booking System", "Responsive Design"],
+  stats: { bookings: "1k+", rating: "4.8/5", destinations: "3+" },
+        icon:  Tent,
+        color: "chart-1",
+      badges: ["Team Project", "Production", "Travel Tech"],
+        year: "2025",
+         impact: "Tourism & Hospitality Digitalization",
+        views: "800+ views",
+        image: "/nomadic1.png",
+        hoverImage: "/nomadic2.png",
+        liveUrl: "https://bookings.nomadic.ae/",
+        teamMembers: [
+          {
+            name: "Mahnoor Tufail",
+            role: "Full Stack Developer",
+            linkedin: "https://www.linkedin.com/in/mahnoortufail/",
+          },
+          {
+            name: "Umar Ahmed",
+            role: "Software Engineer",
+            linkedin: "https://www.linkedin.com/in/umarahmedse/",
+          },
+        ],
+      },
+      {
+        id: "entrometrix",
+        title: "Entrometrix",
+        subtitle: "AI-Powered Industrial Intelligence Platform",
+        description:
+          "Transforms complex operational data into performance excellence through AI-driven modeling and real-time simulations. Focuses on optimizing efficiency, sustainability, and resilience in industrial operations.",
+        category: "teamwork",
+        technologies: [
+          "React",
+          "Next.js",
+          "AI",
+          "Industrial Modeling",
+          "Real-time Analytics",
+          "Data Simulations",
+        ],
+        stats: { efficiency: "Up to 25%", impact: "Measurable Weekly Gains" },
+        icon: Cpu,
+        color: "chart-1",
+        badges: ["Team Project", "Production"],
+        year: "2025",
+        impact: "Industrial Optimization",
+        views: "800+ views",
+        image: "/entrometrix1.png",
+        hoverImage: "/entrometrix2.png",
+        liveUrl: "https://www.entrometrix.ai/",
+        teamMembers: [
+          {
+            name: "Mahnoor Tufail",
+            role: "Full Stack Developer",
+            linkedin: "https://www.linkedin.com/in/mahnoortufail/",
+          },
+          {
+            name: "Umar Ahmed",
+            role: "Senior Software Engineer",
+            linkedin: "https://www.linkedin.com/in/umarahmedse/",
+          },
+        ],
+      },
+      {
+        id: "mohammadalsheikhdentalcenter",
+        title: "Mohammad al sheikh dental center",
+        subtitle: "Dental-Clinic-Management-System",
+        description:
+          "A professional clinic management portal for staff authentication and administration. Provides secure login and access to internal clinic management tools.",
+        category: "teamwork",
+        technologies: ["React", "Next.js", "MongoDB", "Authentication"],
+        stats: { orders: "2k+", uptime: "99.8%", customers: "500+" },
+        icon: Shield,
+        color: "chart-1",
+        badges: ["Team Project", "Production"],
+        year: "2024",
+        impact: "Internal Business Tool",
+        views: "800+ views",
+        image: "/dental1.png",
+        hoverImage: "/dental2.png",
+        liveUrl: "https://mohammadalsheikhdentalcenter.vercel.app/login",
+        teamMembers: [
+          {
+            name: "Mahnoor Tufail",
+            role: "Full Stack Developer",
+            linkedin: "https://www.linkedin.com/in/mahnoortufail/",
+          },
+          {
+            name: "Umar Ahmed",
+            role: "Senior Software Engineer",
+            linkedin: "https://www.linkedin.com/in/umarahmedse/",
+          },
+          {
+            name: "Maryam Sarfraz",
+            role: "Frontend Developer",
+            linkedin: "https://www.linkedin.com/in/maryamsarfraz/",
+          },
         ],
       },
     ],
@@ -121,7 +255,8 @@ export function ServicesSection() {
         year: "2024",
         image: "/interior.png",
         hoverImage: "/interiorhover.png",
-        githubUrl: "https://github.com/mahnoortufailse/Interior_Design-Frontend-Project",
+        githubUrl:
+          "https://github.com/mahnoortufailse/Interior_Design-Frontend-Project",
         liveUrl: "https://interior-design-portfolio.vercel.app",
       },
       {
@@ -130,7 +265,13 @@ export function ServicesSection() {
         description:
           "Location-based pharmacy finder application with real-time availability, medicine search, and store locator. Built with React frontend and Node.js backend with MongoDB database.",
         category: "frontend",
-        technologies: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        technologies: [
+          "React.js",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Tailwind CSS",
+        ],
         icon: Pill,
         color: "chart-1",
         year: "2024",
@@ -145,7 +286,13 @@ export function ServicesSection() {
         description:
           "Comprehensive AI tools platform developed during HiSky internship. Features image generation, video creation, PDF generation, mockup creation, and background removal using third-party APIs.",
         category: "fullstack",
-        technologies: ["React", "Node.js", "AI APIs", "Image Processing", "Video Generation"],
+        technologies: [
+          "React",
+          "Node.js",
+          "AI APIs",
+          "Image Processing",
+          "Video Generation",
+        ],
         icon: Wand2,
         color: "chart-2",
         year: "2024",
@@ -185,29 +332,33 @@ export function ServicesSection() {
         liveUrl: "https://greenwave-loyalty.vercel.app", // replace with your live deployed link
       },
     ],
-  }
+  };
 
   const getFilteredProjects = () => {
     if (activeTab === "all") {
       return {
         featured: projects.featured,
         additional: projects.additional,
-      }
+      };
     }
 
     return {
-      featured: projects.featured.filter((project) => project.category === activeTab),
-      additional: projects.additional.filter((project) => project.category === activeTab),
-    }
-  }
+      featured: projects.featured.filter(
+        (project) => project.category === activeTab
+      ),
+      additional: projects.additional.filter(
+        (project) => project.category === activeTab
+      ),
+    };
+  };
 
-  const filteredProjects = getFilteredProjects()
+  const filteredProjects = getFilteredProjects();
 
   const tabVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 },
-  }
+  };
 
   return (
     <SectionWrapper id="services" className="py-20 bg-muted/30">
@@ -230,7 +381,8 @@ export function ServicesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Comprehensive development services and showcase of real-world projects I've built
+            Comprehensive development services and showcase of real-world
+            projects I've built
           </motion.p>
         </MotionDiv>
 
@@ -238,7 +390,11 @@ export function ServicesSection() {
         <StaggerWrapper className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <motion.div variants={staggerItem}>
             <Card className="group transition-all duration-300 border-l-4 border-l-accent border-r border-r-border/50 border-y border-y-border/50 h-full">
-              <motion.div variants={cardHover} whileHover="hover" whileTap={{ scale: 0.98 }}>
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -248,30 +404,34 @@ export function ServicesSection() {
                     >
                       <Layers className="h-6 w-6 text-accent" />
                     </motion.div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">Full-Stack Development</h3>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      Full-Stack Development
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    End-to-end web application development using MERN stack with modern best practices and scalable
-                    architecture.
+                    End-to-end web application development using MERN stack with
+                    modern best practices and scalable architecture.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["React", "Node.js", "MongoDB", "Express"].map((tech, index) => (
-                      <motion.div
-                        key={tech}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <Badge
-                          variant="secondary"
-                          className="text-xs hover:bg-accent/20 transition-colors cursor-pointer"
+                    {["React", "Node.js", "MongoDB", "Express"].map(
+                      (tech, index) => (
+                        <motion.div
+                          key={tech}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          whileHover={{ scale: 1.05 }}
                         >
-                          {tech}
-                        </Badge>
-                      </motion.div>
-                    ))}
+                          <Badge
+                            variant="secondary"
+                            className="text-xs hover:bg-accent/20 transition-colors cursor-pointer"
+                          >
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      )
+                    )}
                   </div>
                 </CardContent>
               </motion.div>
@@ -280,7 +440,11 @@ export function ServicesSection() {
 
           <motion.div variants={staggerItem}>
             <Card className="group transition-all duration-300 border-l-4 border-l-chart-1 border-r border-r-border/50 border-y border-y-border/50 h-full">
-              <motion.div variants={cardHover} whileHover="hover" whileTap={{ scale: 0.98 }}>
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -290,30 +454,34 @@ export function ServicesSection() {
                     >
                       <Palette className="h-6 w-6 text-chart-1" />
                     </motion.div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">UI/UX Enhancement</h3>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      UI/UX Enhancement
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Transform existing interfaces with modern design principles, improved user experience, and
-                    responsive layouts.
+                    Transform existing interfaces with modern design principles,
+                    improved user experience, and responsive layouts.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["Responsive Design", "User Experience", "Modern UI"].map((tech, index) => (
-                      <motion.div
-                        key={tech}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <Badge
-                          variant="secondary"
-                          className="text-xs hover:bg-chart-1/20 transition-colors cursor-pointer"
+                    {["Responsive Design", "User Experience", "Modern UI"].map(
+                      (tech, index) => (
+                        <motion.div
+                          key={tech}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          whileHover={{ scale: 1.05 }}
                         >
-                          {tech}
-                        </Badge>
-                      </motion.div>
-                    ))}
+                          <Badge
+                            variant="secondary"
+                            className="text-xs hover:bg-chart-1/20 transition-colors cursor-pointer"
+                          >
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      )
+                    )}
                   </div>
                 </CardContent>
               </motion.div>
@@ -323,7 +491,11 @@ export function ServicesSection() {
           {/* API Integration */}
           <motion.div variants={staggerItem}>
             <Card className="group transition-all duration-300 border-l-4 border-l-chart-2 border-r border-r-border/50 border-y border-y-border/50 h-full">
-              <motion.div variants={cardHover} whileHover="hover" whileTap={{ scale: 0.98 }}>
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -333,30 +505,34 @@ export function ServicesSection() {
                     >
                       <Settings className="h-6 w-6 text-chart-2" />
                     </motion.div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">API Integration</h3>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      API Integration
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Seamless integration of third-party APIs, authentication systems, and real-time data
-                    synchronization.
+                    Seamless integration of third-party APIs, authentication
+                    systems, and real-time data synchronization.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["RESTful APIs", "Authentication", "Real-time"].map((tech, index) => (
-                      <motion.div
-                        key={tech}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <Badge
-                          variant="secondary"
-                          className="text-xs hover:bg-chart-2/20 transition-colors cursor-pointer"
+                    {["RESTful APIs", "Authentication", "Real-time"].map(
+                      (tech, index) => (
+                        <motion.div
+                          key={tech}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          whileHover={{ scale: 1.05 }}
                         >
-                          {tech}
-                        </Badge>
-                      </motion.div>
-                    ))}
+                          <Badge
+                            variant="secondary"
+                            className="text-xs hover:bg-chart-2/20 transition-colors cursor-pointer"
+                          >
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      )
+                    )}
                   </div>
                 </CardContent>
               </motion.div>
@@ -366,7 +542,11 @@ export function ServicesSection() {
           {/* Performance Optimization */}
           <motion.div variants={staggerItem}>
             <Card className="group transition-all duration-300 border-l-4 border-l-chart-3 border-r border-r-border/50 border-y border-y-border/50 h-full">
-              <motion.div variants={cardHover} whileHover="hover" whileTap={{ scale: 0.98 }}>
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -376,29 +556,34 @@ export function ServicesSection() {
                     >
                       <Zap className="h-6 w-6 text-chart-3" />
                     </motion.div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">Performance Optimization</h3>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      Performance Optimization
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Improve application speed, reduce load times, and optimize API calls for better user experience.
+                    Improve application speed, reduce load times, and optimize
+                    API calls for better user experience.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["Load Time", "Optimization", "Caching"].map((tech, index) => (
-                      <motion.div
-                        key={tech}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <Badge
-                          variant="secondary"
-                          className="text-xs hover:bg-chart-3/20 transition-colors cursor-pointer"
+                    {["Load Time", "Optimization", "Caching"].map(
+                      (tech, index) => (
+                        <motion.div
+                          key={tech}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          whileHover={{ scale: 1.05 }}
                         >
-                          {tech}
-                        </Badge>
-                      </motion.div>
-                    ))}
+                          <Badge
+                            variant="secondary"
+                            className="text-xs hover:bg-chart-3/20 transition-colors cursor-pointer"
+                          >
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      )
+                    )}
                   </div>
                 </CardContent>
               </motion.div>
@@ -408,7 +593,11 @@ export function ServicesSection() {
           {/* Team Collaboration */}
           <motion.div variants={staggerItem}>
             <Card className="group transition-all duration-300 border-l-4 border-l-chart-4 border-r border-r-border/50 border-y border-y-border/50 h-full">
-              <motion.div variants={cardHover} whileHover="hover" whileTap={{ scale: 0.98 }}>
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -418,11 +607,13 @@ export function ServicesSection() {
                     >
                       <Users className="h-6 w-6 text-chart-4" />
                     </motion.div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">Team Collaboration</h3>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      Team Collaboration
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Work effectively with cross-functional teams, contribute to code reviews, and maintain clean
-                    codebases.
+                    Work effectively with cross-functional teams, contribute to
+                    code reviews, and maintain clean codebases.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {["Git", "Code Review", "Agile"].map((tech, index) => (
@@ -451,7 +642,11 @@ export function ServicesSection() {
           {/* Analytics & Reporting */}
           <motion.div variants={staggerItem}>
             <Card className="group transition-all duration-300 border-l-4 border-l-chart-5  border-r border-r-border/50 border-y border-y-border/50 h-full">
-              <motion.div variants={cardHover} whileHover="hover" whileTap={{ scale: 0.98 }}>
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -461,11 +656,13 @@ export function ServicesSection() {
                     >
                       <BarChart3 className="h-6 w-6 text-chart-5" />
                     </motion.div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">Analytics & Reporting</h3>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      Analytics & Reporting
+                    </h3>
                   </div>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Implement data visualization, user analytics, and comprehensive reporting systems for business
-                    insights.
+                    Implement data visualization, user analytics, and
+                    comprehensive reporting systems for business insights.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {["Data Viz", "Analytics", "Reports"].map((tech, index) => (
@@ -529,27 +726,34 @@ export function ServicesSection() {
                     id: "all",
                     label: "All Projects",
                     shortLabel: "All",
-                    count: projects.featured.length + projects.additional.length,
+                    count:
+                      projects.featured.length + projects.additional.length,
                   },
                   {
                     id: "frontend",
                     label: "Frontend",
                     shortLabel: "Frontend",
-                    count: projects.additional.filter((p) => p.category === "frontend").length,
+                    count: projects.additional.filter(
+                      (p) => p.category === "frontend"
+                    ).length,
                   },
                   {
                     id: "fullstack",
                     label: "Full Stack",
                     shortLabel: "Full Stack",
-                    count: [...projects.featured, ...projects.additional].filter((p) => p.category === "fullstack")
-                      .length,
+                    count: [
+                      ...projects.featured,
+                      ...projects.additional,
+                    ].filter((p) => p.category === "fullstack").length,
                   },
                   {
                     id: "teamwork",
                     label: "Team Work",
                     shortLabel: "Team",
-                    count: [...projects.featured, ...projects.additional].filter((p) => p.category === "teamwork")
-                      .length,
+                    count: [
+                      ...projects.featured,
+                      ...projects.additional,
+                    ].filter((p) => p.category === "teamwork").length,
                   },
                 ].map((tab, index) => (
                   <motion.button
@@ -576,7 +780,10 @@ export function ServicesSection() {
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.2, delay: 0.1 }}
                     >
-                      <Badge variant="secondary" className="text-xs px-1.5 py-0.5 min-w-[1.5rem] text-center">
+                      <Badge
+                        variant="secondary"
+                        className="text-xs px-1.5 py-0.5 min-w-[1.5rem] text-center"
+                      >
                         {tab.count}
                       </Badge>
                     </motion.div>
@@ -608,9 +815,14 @@ export function ServicesSection() {
                 </motion.h4>
                 <StaggerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                   {filteredProjects.featured.map((project, index) => {
-                    const IconComponent = project.icon
+                    const IconComponent = project.icon;
                     return (
-                      <motion.div key={project.id} variants={staggerItem} layout layoutId={project.id}>
+                      <motion.div
+                        key={project.id}
+                        variants={staggerItem}
+                        layout
+                        layoutId={project.id}
+                      >
                         <Card className="group transition-all duration-500 overflow-hidden border-0 bg-gradient-to-br from-background to-muted/50 h-full w-full">
                           <motion.div
                             variants={cardHover}
@@ -634,11 +846,15 @@ export function ServicesSection() {
                                   />
                                   {project.hoverImage && (
                                     <Image
-                                      src={project.hoverImage || "/placeholder.svg"}
+                                      src={
+                                        project.hoverImage || "/placeholder.svg"
+                                      }
                                       alt={`${project.title} hover view`}
                                       fill
                                       className={`object-cover transition-all duration-700 ${
-                                        hoveredProject === project.id ? "opacity-100 scale-110" : "opacity-0 scale-100"
+                                        hoveredProject === project.id
+                                          ? "opacity-100 scale-110"
+                                          : "opacity-0 scale-100"
                                       }`}
                                     />
                                   )}
@@ -673,11 +889,15 @@ export function ServicesSection() {
                               <div className="absolute bottom-4 right-4 flex flex-col sm:flex-row gap-2 sm:gap-4 text-xs text-white/80">
                                 <div className="flex items-center gap-1">
                                   <Calendar className="h-3 w-3 flex-shrink-0" />
-                                  <span className="truncate">{project.year}</span>
+                                  <span className="truncate">
+                                    {project.year}
+                                  </span>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <TrendingUp className="h-3 w-3 flex-shrink-0" />
-                                  <span className="truncate">{project.impact}</span>
+                                  <span className="truncate">
+                                    {project.impact}
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -687,13 +907,18 @@ export function ServicesSection() {
                                   <h4 className="text-lg sm:text-xl font-heading font-semibold text-foreground truncate">
                                     {project.title}
                                   </h4>
-                                  <Badge variant="outline" className="text-xs border-accent/30 flex-shrink-0">
+                                  <Badge
+                                    variant="outline"
+                                    className="text-xs border-accent/30 flex-shrink-0"
+                                  >
                                     {project.subtitle.split(" ")[0]}
                                   </Badge>
                                 </div>
                                 <div className="flex items-center gap-1 text-sm text-muted-foreground flex-shrink-0">
                                   <Eye className="h-4 w-4" />
-                                  <span className="text-xs sm:text-sm">{project.views}</span>
+                                  <span className="text-xs sm:text-sm">
+                                    {project.views}
+                                  </span>
                                 </div>
                               </div>
                               <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
@@ -702,19 +927,34 @@ export function ServicesSection() {
 
                               {project.teamMembers && (
                                 <div className="mb-4 p-3 bg-muted/30 rounded-lg">
-                                  <h5 className="text-sm font-semibold text-foreground mb-2">Team Members:</h5>
+                                  <h5 className="text-sm font-semibold text-foreground mb-2">
+                                    Team Members:
+                                  </h5>
                                   <div className="space-y-1">
                                     {project.teamMembers.map((member, idx) => (
-                                      <div key={idx} className="flex items-center justify-between text-xs gap-2">
+                                      <div
+                                        key={idx}
+                                        className="flex items-center justify-between text-xs gap-2"
+                                      >
                                         <span className="text-muted-foreground min-w-0 flex-1">
-                                          <strong className="truncate block sm:inline">{member.name}</strong>
-                                          <span className="block sm:inline"> - {member.role}</span>
+                                          <strong className="truncate block sm:inline">
+                                            {member.name}
+                                          </strong>
+                                          <span className="block sm:inline">
+                                            {" "}
+                                            - {member.role}
+                                          </span>
                                         </span>
                                         <Button
                                           size="sm"
                                           variant="ghost"
                                           className="h-6 w-6 p-0 cursor-pointer flex-shrink-0"
-                                          onClick={() => window.open(member.linkedin, "_blank")}
+                                          onClick={() =>
+                                            window.open(
+                                              member.linkedin,
+                                              "_blank"
+                                            )
+                                          }
                                         >
                                           <Linkedin className="h-3 w-3" />
                                         </Button>
@@ -746,11 +986,16 @@ export function ServicesSection() {
                                   <Button
                                     size="sm"
                                     className="bg-accent hover:bg-accent/90 group/btn cursor-pointer w-full sm:w-auto"
-                                    onClick={() => window.open(project.liveUrl, "_blank")}
+                                    onClick={() =>
+                                      window.open(project.liveUrl, "_blank")
+                                    }
                                   >
                                     <motion.div
                                       animate={{ scale: [1, 1.1, 1] }}
-                                      transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                                      transition={{
+                                        duration: 2,
+                                        repeat: Number.POSITIVE_INFINITY,
+                                      }}
                                     >
                                       <Play className="h-4 w-4 mr-2" />
                                     </motion.div>
@@ -762,7 +1007,7 @@ export function ServicesSection() {
                           </motion.div>
                         </Card>
                       </motion.div>
-                    )
+                    );
                   })}
                 </StaggerWrapper>
               </motion.div>
@@ -789,13 +1034,20 @@ export function ServicesSection() {
                 >
                   {activeTab === "all"
                     ? "Other Notable Projects"
-                    : `${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} Projects`}
+                    : `${
+                        activeTab.charAt(0).toUpperCase() + activeTab.slice(1)
+                      } Projects`}
                 </motion.h4>
                 <StaggerWrapper className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {filteredProjects.additional.map((project, index) => {
-                    const IconComponent = project.icon
+                    const IconComponent = project.icon;
                     return (
-                      <motion.div key={project.id} variants={staggerItem} layout layoutId={project.id}>
+                      <motion.div
+                        key={project.id}
+                        variants={staggerItem}
+                        layout
+                        layoutId={project.id}
+                      >
                         <Card className="group transition-all duration-300 border-0 bg-gradient-to-br from-background to-muted/30 h-full overflow-hidden w-full">
                           <motion.div
                             variants={cardHover}
@@ -818,11 +1070,15 @@ export function ServicesSection() {
                                 />
                                 {project.hoverImage && (
                                   <Image
-                                    src={project.hoverImage || "/placeholder.svg"}
+                                    src={
+                                      project.hoverImage || "/placeholder.svg"
+                                    }
                                     alt={`${project.title} hover view`}
                                     fill
                                     className={`object-cover transition-all duration-500 ${
-                                      hoveredProject === project.id ? "opacity-100 scale-105" : "opacity-0 scale-100"
+                                      hoveredProject === project.id
+                                        ? "opacity-100 scale-105"
+                                        : "opacity-0 scale-100"
                                     }`}
                                   />
                                 )}
@@ -831,8 +1087,12 @@ export function ServicesSection() {
 
                               {/* Project icon overlay */}
                               <div className="absolute top-4 left-4">
-                                <div className={`p-2 bg-${project.color}/20 backdrop-blur-sm rounded-lg`}>
-                                  <IconComponent className={`h-5 w-5 text-white`} />
+                                <div
+                                  className={`p-2 bg-${project.color}/20 backdrop-blur-sm rounded-lg`}
+                                >
+                                  <IconComponent
+                                    className={`h-5 w-5 text-white`}
+                                  />
                                 </div>
                               </div>
 
@@ -854,12 +1114,15 @@ export function ServicesSection() {
                                     {project.title}
                                   </h4>
                                   <div className="flex items-center gap-2 mt-1">
-                                    <Badge variant="outline" className="text-xs flex-shrink-0">
+                                    <Badge
+                                      variant="outline"
+                                      className="text-xs flex-shrink-0"
+                                    >
                                       {project.category === "fullstack"
                                         ? "Full-Stack"
                                         : project.category === "frontend"
-                                          ? "Frontend"
-                                          : "Team Work"}
+                                        ? "Frontend"
+                                        : "Team Work"}
                                     </Badge>
                                   </div>
                                 </div>
@@ -881,12 +1144,19 @@ export function ServicesSection() {
                               </div>
 
                               <div className="flex items-center gap-2">
-                                <motion.div variants={hoverScale} whileHover="hover" whileTap="tap" className="flex-1">
+                                <motion.div
+                                  variants={hoverScale}
+                                  whileHover="hover"
+                                  whileTap="tap"
+                                  className="flex-1"
+                                >
                                   <Button
                                     size="sm"
                                     variant="outline"
                                     className="w-full group/btn bg-transparent cursor-pointer"
-                                    onClick={() => window.open(project.githubUrl, "_blank")}
+                                    onClick={() =>
+                                      window.open(project.githubUrl, "_blank")
+                                    }
                                   >
                                     <ArrowUpRight className="h-4 w-4 group-hover/btn:scale-110 transition-transform" />
                                     <Github className="h-4 w-4 group-hover/btn:scale-110 transition-transform" />
@@ -898,7 +1168,7 @@ export function ServicesSection() {
                           </motion.div>
                         </Card>
                       </motion.div>
-                    )
+                    );
                   })}
                 </StaggerWrapper>
               </motion.div>
@@ -906,32 +1176,35 @@ export function ServicesSection() {
           </AnimatePresence>
 
           {/* Empty State */}
-          {filteredProjects.featured.length === 0 && filteredProjects.additional.length === 0 && (
-            <motion.div
-              className="text-center py-12"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="text-muted-foreground mb-4">
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Folder className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                </motion.div>
-                <p className="text-lg">No projects found in this category</p>
-                <p className="text-sm">Try selecting a different tab to explore other projects</p>
-              </div>
-            </motion.div>
-          )}
+          {filteredProjects.featured.length === 0 &&
+            filteredProjects.additional.length === 0 && (
+              <motion.div
+                className="text-center py-12"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-muted-foreground mb-4">
+                  <motion.div
+                    animate={{
+                      y: [0, -10, 0],
+                      rotate: [0, 5, -5, 0],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <Folder className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                  </motion.div>
+                  <p className="text-lg">No projects found in this category</p>
+                  <p className="text-sm">
+                    Try selecting a different tab to explore other projects
+                  </p>
+                </div>
+              </motion.div>
+            )}
         </div>
 
         {/* Work Experience Timeline */}
@@ -965,13 +1238,21 @@ export function ServicesSection() {
                         <h4 className="font-heading font-semibold text-foreground text-base sm:text-lg">
                           Full Stack Developer
                         </h4>
-                        <Badge className="bg-accent text-accent-foreground w-fit">Current</Badge>
+                        <Badge className="bg-accent text-accent-foreground w-fit">
+                          Current
+                        </Badge>
                       </div>
-                      <p className="text-muted-foreground font-medium text-sm sm:text-base">Cybitronix Technology</p>
-                      <p className="text-xs sm:text-sm text-muted-foreground mb-3">Augest 2024 - Present</p>
+                      <p className="text-muted-foreground font-medium text-sm sm:text-base">
+                        Cybitronix Technology
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-3">
+                        Augest 2024 - Present
+                      </p>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Currently working as a Full Stack Developer, contributing to innovative projects like Foreigner
-                        Cafe and developing cutting-edge solutions using modern web technologies and best practices.
+                        Currently working as a Full Stack Developer,
+                        contributing to innovative projects like Foreigner Cafe
+                        and developing cutting-edge solutions using modern web
+                        technologies and best practices.
                       </p>
                     </div>
                   </div>
@@ -995,10 +1276,13 @@ export function ServicesSection() {
                       <p className="text-muted-foreground font-medium text-sm sm:text-base">
                         WISE360Solutions (SMC-PRIVATE) LIMITED
                       </p>
-                      <p className="text-xs sm:text-sm text-muted-foreground mb-3">April 2025 - July 2025</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-3">
+                        April 2025 - July 2025
+                      </p>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Developed SignaForm and Sinapsity, built responsive UIs with React, implemented real-time
-                        features, and optimized performance for production use.
+                        Developed SignaForm and Sinapsity, built responsive UIs
+                        with React, implemented real-time features, and
+                        optimized performance for production use.
                       </p>
                     </div>
                   </div>
@@ -1018,10 +1302,15 @@ export function ServicesSection() {
                         <h4 className="font-heading font-semibold text-foreground mb-1 text-sm sm:text-base">
                           MERN Stack Developer
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">FirnasTech (Pvt.) Ltd</p>
-                        <p className="text-xs text-muted-foreground mb-2">Jan 2025 - Mar 2025</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
+                          FirnasTech (Pvt.) Ltd
+                        </p>
+                        <p className="text-xs text-muted-foreground mb-2">
+                          Jan 2025 - Mar 2025
+                        </p>
                         <p className="text-xs text-muted-foreground leading-relaxed">
-                          Contributed to MERN stack projects with secure authentication and state management.
+                          Contributed to MERN stack projects with secure
+                          authentication and state management.
                         </p>
                       </div>
                     </div>
@@ -1040,10 +1329,15 @@ export function ServicesSection() {
                         <h4 className="font-heading font-semibold text-foreground mb-1 text-sm sm:text-base">
                           Full Stack Developer
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">HiSky (Pvt.) Ltd</p>
-                        <p className="text-xs text-muted-foreground mb-2">Sep 2024 - Oct 2024</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
+                          HiSky (Pvt.) Ltd
+                        </p>
+                        <p className="text-xs text-muted-foreground mb-2">
+                          Sep 2024 - Oct 2024
+                        </p>
                         <p className="text-xs text-muted-foreground leading-relaxed">
-                          Gained experience in full-stack development, user authentication, and API integration.
+                          Gained experience in full-stack development, user
+                          authentication, and API integration.
                         </p>
                       </div>
                     </div>
@@ -1055,5 +1349,5 @@ export function ServicesSection() {
         </motion.div>
       </div>
     </SectionWrapper>
-  )
+  );
 }
