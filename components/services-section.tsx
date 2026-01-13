@@ -220,7 +220,7 @@ export function ServicesSection() {
         year: "2024",
         impact: "Internal Business Tool",
         views: "800+ views",
-        image: "/dental1.png",
+        image: "/dental1.jpeg",
         hoverImage: "/dental2.png",
         liveUrl: "https://mohammadalsheikhdentalcenter.vercel.app/login",
         teamMembers: [
