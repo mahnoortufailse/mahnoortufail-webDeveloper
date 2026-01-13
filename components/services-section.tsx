@@ -151,7 +151,7 @@ export function ServicesSection() {
         year: "2025",
          impact: "Tourism & Hospitality Digitalization",
         views: "800+ views",
-        image: "/nomadic1.png",
+        image: "/nomadic1.jpeg",
         hoverImage: "/nomadic2.png",
         liveUrl: "https://bookings.nomadic.ae/",
         teamMembers: [
